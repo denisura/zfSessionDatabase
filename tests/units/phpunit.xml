@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="../bootstrap.php"
+         convertErrorsToExceptions="true"
+         convertWarningsToExceptions="true"
+         convertNoticesToExceptions="true"
+         strict="true"
+         collors="true">
+        
+    <testsuites>         
+        <testsuite name="zfSessionDatabase Units Tests">
+            <directory>./</directory>
+        </testsuite>
+    </testsuites>
+     
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../../application/</directory>
+            <exclude>
+                <directory suffix=".phtml">../../application/</directory>
+                <file>../../application/Bootstrap.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+	
+    <logging>
+        <log type="coverage-html" 
+             target="../log/report" 
+             charset="UTF-8" 
+             yui="true" 
+             highlight="true" 
+             lowUpperBound="50" 
+             highLowerBound="80" />
+        <log type="testdox" 
+             target="../log/testdox.html"/>
+	</logging>
+
+</phpunit>

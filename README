@@ -1,0 +1,18 @@
+Storing Session in Database is one of the ways to handle session data in the environment with multiple web servers.
+This project allows to start using zend framework to store Session in Database.
+
+See more details on http://dionysus.uraganov.net/frameworks/zend-framework-storing-session-in-database/
+
+Prerequisites
+
+1. Create in MySql Database table to store session data
+
+    CREATE TABLE `app_session` (  
+      `id` char(32),  
+      `modified` int,  
+      `lifetime` int,  
+      `data` text,  
+      PRIMARY KEY (`id`)  
+    );  
+
+2. Set application configuration in application/config/application.ini 

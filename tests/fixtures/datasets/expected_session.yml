@@ -1,0 +1,4 @@
+app_session:
+  -
+    lifetime: 864000
+    data: Default|a:1:{s:3:"foo";i:100;}mySpace|a:1:{s:3:"foo";i:200;} 

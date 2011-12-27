@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="../bootstrap.php"
+         convertErrorsToExceptions="true"
+         convertWarningsToExceptions="true"
+         convertNoticesToExceptions="true"
+         strict="true"
+         collors="true">
+        
+    <testsuites>         
+        <testsuite name="zfSessionDatabase Functional Tests">
+            <directory>./</directory>
+        </testsuite>
+    </testsuites>
+     
+    <filter>
+        <whitelist>
+        </whitelist>
+    </filter>
+	
+    <selenium>
+        <browser name="Firefox on Linux"
+                 browser="*firefox"
+                 host="172.16.246.129"
+                 port="4444"
+                 timeout="30000" />
+    </selenium>
+    
+    <logging>
+        <log type="coverage-html" 
+             target="../log/report" 
+             charset="UTF-8" 
+             yui="true" 
+             highlight="true" 
+             lowUpperBound="50" 
+             highLowerBound="80" />
+        <log type="testdox" 
+             target="../log/testdox.html"/>
+	</logging>
+
+</phpunit>
